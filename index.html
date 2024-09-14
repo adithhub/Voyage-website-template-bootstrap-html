@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage Travel</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Custom CSS for additional styling */
+        .carousel-item {
+            height: 500px;
+            color: white;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .carousel-caption {
+            bottom: 200px;
+        }
+
+        .carousel-caption h1 {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .search-bar {
+            background-color: #2b2b2b;
+            padding: 20px;
+            margin-top: -50px;
+            z-index: 1000;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .special-offers img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .holiday-type .icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer-links a {
+            color: #999;
+            display: block;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">VOYAGE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cruises</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Specials</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Holidays</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#heroCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#heroCarousel" data-slide-to="1"></li>
+            <li data-target="#heroCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('https://images.unsplash.com/photo-1576078377689-3576cbb8ba97?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>TO TRAVEL IS TO LIVE</h1>
+                    <p>You Don't Need Magic to Disappear. All you need is a destination.</p>
+                    <a href="#" class="btn btn-success">Show on the Map</a>
+                    <a href="#" class="btn btn-outline-light">More Info</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1654064772649-2c2228b78e94?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Explore the World</h1>
+                    <p>Discover amazing places around the globe with us.</p>
+                    <a href="#" class="btn btn-success">Show on the Map</a>
+                    <a href="#" class="btn btn-outline-light">More Info</a>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1576078378776-c1712ffc952b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Your Next Adventure</h1>
+                    <p>Get ready for your next big adventure with our expert guides.</p>
+                    <a href="#" class="btn btn-success">Show on the Map</a>
+                    <a href="#" class="btn btn-outline-light">More Info</a>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="search-title">
+            <span>FIND YOUR </span><br><span class="bold">HOLIDAYS</span>
+        </div>
+        <div class="input-box">
+            <label class="label" for="destination">Where</label>
+            <input type="text" id="destination" placeholder="destination">
+        </div>
+        <div class="input-box">
+            <label class="label" for="date">When</label>
+            <input type="date" id="date" placeholder="select date">
+        </div>
+        <button class="search-btn">Search</button>
+    </div>
+
+   
+    <!-- Special Offers -->
+    <section class="offer-mainbody">
+        <div class="offers-container">
+            <h2>SPECIAL OFFERS</h2>
+            <p>Best 2014 packages where people love to stay!</p>
+            <div class="offers" id="offers">
+                <div class="offer">
+                    <img src="Images/2054375.jpg" alt="Statue of Liberty">
+                    <div class="offer-info">
+                        <h3>Statue of Liberty, USA</h3>
+                        <p>New Destination</p>
+                    </div>
+                </div>
+                <div class="offer">
+                    <img src="Images/3946983.jpg" alt="Seychelles">
+                    <div class="offer-info">
+                        <h3>Spectacular Seychelles</h3>
+                        <p>New Destination</p>
+                    </div>
+                </div>
+                <div class="offer">
+                    <img src="Images/84561.jpg" alt="Hong Kong & Macau">
+                    <div class="offer-info">
+                        <h3>Hong Kong & Macau</h3>
+                        <p>Special Offer</p>
+                    </div>
+                </div>
+                <!-- Additional offers will be appended here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Holiday Types -->
+    <section class="holiday-types text-center py-5 background-body">
+        <div class="container">
+            <h2 class="text-white mb-4">HOLIDAYS TYPE</h2>
+            <p class="text-white mb-5">Get explore your dream to travel the world</p>
+            <div class="row justify-content-center">
+                <div class="col-6 col-md-2">
+                    <div class="holiday-icon">
+                        <img src="Images/cruise-ship.png" alt="Cruise" class="img-fluid">
+                    </div>
+                    <p class="text-white mt-2">Cruise</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="holiday-icon">
+                        <img src="Images/travel.png" alt="City Breaks" class="img-fluid">
+                    </div>
+                    <p class="text-white mt-2">City Breaks</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="holiday-icon">
+                        <img src="Images/honeymoon.png" alt="Honeymoon" class="img-fluid">
+                    </div>
+                    <p class="text-white mt-2">Honeymoon</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="holiday-icon">
+                        <img src="Images/adventure-game.png" alt="Adventure" class="img-fluid">
+                    </div>
+                    <p class="text-white mt-2">Adventure</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="holiday-icon">
+                        <img src="Images/hat.png" alt="Safari" class="img-fluid">
+                    </div>
+                    <p class="text-white mt-2">Safari</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="holiday-icon">
+                        <img src="Images/vacations.png" alt="Beach" class="img-fluid">
+                    </div>
+                    <p class="text-white mt-2">Beach</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-5">
+        <div class="container text-center">
+            <h2>HAPPY CLIENTS</h2>
+            <p>What customers say about us and why they love our services!</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                    <p>- Client Name</p>
+                </div>
+                <div class="col-md-4">
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                    <p>- Client Name</p>
+                </div>
+                <div class="col-md-4">
+                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
+                    <p>- Client Name</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section newsletter">
+                <h3>Newsletter</h3>
+                <p>Data autem vel eum iure re voluptate velit esse quam nihil molestiae consequatur, vel illum qui...</p>
+                <form action="#">
+                    <input type="email" placeholder="Subscribe..." required>
+                    <button type="submit">GO</button>
+                </form>
+            </div>
+            
+            <div class="footer-section latest-news">
+                <h3>Latest News</h3>
+                <div class="news-item">
+                    <img src="https://via.placeholder.com/50" alt="News">
+                    <div>
+                        <p>Post format gallery: Multiple images</p>
+                        <span>October 21, 2019 - 3:00 am</span>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <img src="https://via.placeholder.com/50" alt="News">
+                    <div>
+                        <p>Snowboarding at its best</p>
+                        <span>December 12, 2018 - 9:17 am</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-section tags">
+                <h3>Tags</h3>
+                <div class="tag-buttons">
+                    <button>Agent Login</button>
+                    <button>Customer Login</button>
+                    <button>Not a Member?</button>
+                    <button>Contact</button>
+                    <button>New Horizons</button>
+                    <button>Landscape</button>
+                    <button>Nature</button>
+                    <button>Photos</button>
+                    <button>Portrait</button>
+                </div>
+            </div>
+            
+            <div class="footer-section address">
+                <h3>Address</h3>
+                <p>121 King Street, Melbourne, Australia</p>
+                <p>Email: example@example.com</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tumblr"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p><a href="#">Home</a> | <a href="#">Destinations</a> | <a href="#">Cruises</a> | <a href="#">Specials</a> | <a href="#">Holidays</a> | <a href="#">Blog</a> | <a href="#">Contact Us</a></p>
+            <p>&copy; 2024 Voyage. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
